@@ -1,0 +1,169 @@
+.hide{
+	display:none
+}
+.navbar-collapse >nav {
+    margin-left: auto;
+}
+
+
+.dropdown-menu li a {
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+    padding: 10px 25px;
+    position: relative;
+	font-size: 13px;
+    opacity: .9;
+	display: block;
+    width: 100%;
+    clear: both;
+    font-weight: 400;
+    color: #212529;
+    text-align: inherit;
+    white-space: nowrap;
+    background-color: transparent;
+    border: 0;
+}
+.dropdown-menu{
+padding: 10px 0;
+    border: 0;
+    -webkit-box-shadow: 0px 10px 40px -4px rgb(0 0 0 / 10%);
+    box-shadow: 0px 10px 40px -4px rgb(0 0 0 / 10%);
+	transition: all .4s;
+}
+
+#main-menu .dropdown > a::after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    border-top: 0.3em solid;
+    border-right: 0.3em solid transparent;
+    border-bottom: 0;
+    border-left: 0.3em solid transparent;
+}
+.dropdown-menu li a::after {
+	display:none!important;
+}
+.pattern1-bg .filter.bg-img {
+    background-image: url(../img/line-pattern1.png)!important;
+}
+.data-overlay-dark h6, .data-overlay-dark span,
+.data-overlay-dark h4{
+	color:#FFF;
+}
+@media screen and (max-width: 991px){
+	
+	.dropdown-menu li a{
+		color:#FFF!important;
+	}
+	.search-form__submit.form-submit{
+		display:none
+	}
+}
+.dark-style .title-section {
+    color: #FFF;
+}
+.mr-top-140{
+	margin-top:-140px;
+}
+.projdtal{
+	width:100%;
+	clear:both;
+	float:left;
+}
+.video-bg{
+	width:100%;
+}
+.blog-list-style1 > .img > a{
+	width:100%;
+}
+.comments-area article h3{
+	font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+}
+.comments-area article.js-comment{
+	padding: 30px 0;
+    border-bottom: 1px solid #eee;
+}
+.comments-area section h2{
+	font-size:25px;
+}
+.comments-area article ul.links.inline{
+	float:right
+}
+.comments-area .indented{
+	margin-left:50px;
+}
+.comment-form input[type=text], .comment-form textarea,
+.user-login-form input[type=text], .user-login-form input[type=password]{
+	width: 100%;
+    padding: 17px;
+    background: #fafafa;
+    border: 0;
+}
+.comment-form input[type=submit], .search-form input[type=submit],
+.user-login-form input[type=submit]{
+	cursor: pointer;
+    padding: 14px 40px;
+    background: #1e1e1e;
+    color: #FFF;
+    border: none;
+    border-radius: 3px
+}
+.comments-area h2:last-child, .comments-area h2:nth-child{
+	margin-top:50px;
+}
+.h-node-article{
+	font-size:27px!important;
+}
+.comment-form label {
+    margin-top: 20px!important;
+}
+.contact-form input[type=submit]:last-child {
+    float: right;
+	cursor: pointer;
+}
+.contact-form input[type=submit] {
+    width: 49%;
+    float: left;
+	cursor: pointer;
+}
+.contact .form {
+    padding: 81px 5%!important;
+}
+.search-form {
+    margin-top: 60px;
+    width: 100%;
+	margin-bottom:25px;
+}
+.search-form input[type=search] {
+    width: 100%;
+    padding: 10px;
+    border: solid 1px #EEE;
+    margin-bottom: 20px;
+}
+.path-search .row-content h2{
+	width:100%;
+}
+.path-search .row-content ol{
+	width:100%;
+	
+}
+.path-search .row-content ol li{
+margin-bottom: 22px;
+    border-bottom: solid 1px #EEE;
+    padding-bottom: 22px;
+}
+	
+.path-search .row-content ol li a{
+	font-size:23px;
+}
+.user-login-form{
+	margin-bottom: 60px;
+    margin-top: 25px;
+}

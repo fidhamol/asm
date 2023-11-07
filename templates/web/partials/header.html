@@ -1,0 +1,81 @@
+{% load static %}
+<div class="progress-wrap cursor-pointer">
+    <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+</div>
+
+<div class="mouse-cursor cursor-outer"></div>
+<div class="mouse-cursor cursor-inner"></div>
+<a href="#main-content" class="visually-hidden focusable">
+    Skip to main content
+</a>
+
+<nav class="navbar change navbar-expand-lg">
+    <div class="container">
+
+        <a class="logo" href="{% url 'web:index' %}"><img src="https://www.asmdecor.com/img/logo.png" alt="logo"
+                class="logo-default"><img src="https://www.asmdecor.com/img/logo-small.png" alt="logo"
+                class="scrolled-logo hide"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <nav role="navigation" aria-labelledby="block-drupalet-archo-main-menu-menu"
+                id="block-drupalet-archo-main-menu">
+                <h2 class="visually-hidden" id="block-drupalet-archo-main-menu-menu">Main navigation</h2>
+                <ul class="navbar-nav ml-auto" id="main-menu" 0>
+                    <li class="menu-item nav-item ">
+                        <a href="{% url 'web:index' %}" class="nav-link {% if is_index %} active {% endif %}" data-drupal-link-system-path="node/4">HOME</a>
+                    </li>
+                    <li class="menu-item nav-item  rd-navbar-submenu" 0>
+                        <a href="{% url 'web:about' %}" class="nav-link {% if is_about %} active {% endif %} " data-drupal-link-system-path="node/4">ABOUT US</a>
+                    </li>
+                    <li class="menu-item nav-item  rd-navbar-submenu" 0>
+                        <a href="{% url 'web:project' %}" class="nav-link {% if is_project %} active {% endif %}" data-drupal-link-system-path="node/44">PROJECT</a>
+                    </li>
+                    <li class="menu-item nav-item  rd-navbar-submenu" 0>
+                        <a href="{% url 'web:service' %}" class="nav-link {% if is_service %} active {% endif %}" data-drupal-link-system-path="node/44">SERVICES</a>
+                    </li>
+                    <li class="menu-item nav-item  rd-navbar-submenu" 0>
+                        <a href="{% url 'web:update' %}" class="nav-link {% if is_update %} active {% endif %}" data-drupal-link-system-path="node/44">UPDATES</a>
+                    </li>
+                    <li class="menu-item nav-item  rd-navbar-submenu" 0>
+                        <a href="{% url 'web:career' %}" class="nav-link {% if is_career %} active {% endif %}" data-drupal-link-system-path="node/44"> CAREER</a>
+                    </li>
+                    <li class="menu-item nav-item  rd-navbar-submenu" 0>
+                        <a href="{% url 'web:contact' %}" class="nav-link {% if is_contact %} active {% endif %}" data-drupal-link-system-path="contact">CONTACT</a>
+                    </li>
+                </ul>
+                 <!-- <li class="menu-item nav-item rd-navbar--has-dropdown rd-navbar-submenu" 0>
+                        <a href="{% url 'web:contact' %}" class="nav-link" data-drupal-link-system-path="contact">CONTACT</a>
+                    </li> -->
+            </nav>
+            <div class="social-icon">
+                <a href="#0"><i class="fab fa-facebook-f"></i></a>
+                <a href="#0"><i class="fab fa-twitter"></i></a>
+                <a href="#0"><i class="fab fa-behance"></i></a>
+            </div>
+            <div class="search">
+                <span class="icon pe-7s-search cursor-pointer"></span>
+                <div class="search-form text-center custom-font">
+                    <form action="" method="get" id="search-block-form"
+                        accept-charset="UTF-8">
+                        <div
+                            class="js-form-item form-item js-form-type-search form-item-keys js-form-item-keys form-no-label">
+                            <label for="edit-keys" class="visually-hidden">Search</label>
+                            <input title="Enter the terms you wish to search for." data-drupal-selector="edit-keys"
+                                type="search" id="edit-keys" name="keys" value size="15" maxlength="128"
+                                class="form-search" />
+                        </div>
+                        <input class="search-form__submit button js-form-submit form-submit"
+                            data-drupal-selector="edit-submit" type="submit" id="edit-submit" value="Search" />
+                    </form>
+                    <span class="close pe-7s-close cursor-pointer"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

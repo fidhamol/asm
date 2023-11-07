@@ -1,0 +1,79 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<header class="pages-header bg-img valign parallaxie"
+    data-background="https://archo.drupalet.com/demo/themes/drupalet_archo/img/05.jpg" data-overlay-dark="5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="cont text-center">
+                    <h1>Updates & Blogs</h1>
+                    <div class="path">
+                        <a href="#0">Home</a><span>/</span><a href="#0" class="active">Updates & Blogs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section
+    class="views-element-container blog-grid section-padding mb-50 section block drp-block block-views block-views-blockblog-block-style-1"
+    id="block-views-block-blog-block-style-1" data-title="Our Blogs" data-sub-title="Latest News">
+    <div class="container rm-container-class">
+        <div class="section-head text-center">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-10">
+                    <h6 class="custom-font wow fadeInDown subtitle-section" data-wow-delay=".3s"></h6>
+                    <h4 class="playfont wow flipInX title-section" data-wow-delay=".5s">Blog style 1</h4>
+                </div>
+            </div>
+        </div>
+        <div class="row row-content">
+            {% for update in updates %}
+            <div class="col-lg-4">
+                <div class="item wow fadeInUp md-mb50" data-wow-delay=".3s">
+                    <div class="post-img">
+                        <div class="img"> <img src="{{update.image.url}}" alt> </div>
+                    </div>
+                    <div class="cont">
+                        <div class="info"> <a href="#0">admin</a> <a href="#0">01 Wed 2022</a> </div>
+                        <h5 class="playfont"><a href="#">{{update.title}}</a> </h5>
+                        <a href="#" class="more"> <span class="custom-font">Read More</span> </a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+
+            <!-- <div class="col-lg-4">
+      <div class="item wow fadeInUp md-mb50" data-wow-delay=".3s">
+        <div class="post-img">
+          <div class="img"> <img
+              src="{% static 'web/sites/default/files/styles/image_802x590/public/2022-01/b41a78.jpg' %}" alt> </div>
+        </div>
+        <div class="cont">
+          <div class="info"> <a href="#0">admin</a> <a href="#0">01 Wed 2022</a> </div>
+          <h5 class="playfont"><a href="node/46.html">The main component of a healthy env for </a> </h5>
+          <a href="node/46.html" class="more"> <span class="custom-font">Read More</span> </a>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-4">
+      <div class="item wow fadeInUp md-mb50" data-wow-delay=".3s">
+        <div class="post-img">
+          <div class="img"> <img
+              src="{% static 'web/sites/default/files/styles/image_802x590/public/2021-12/1_10a86d.jpg' %}" alt> </div>
+        </div>
+        <div class="cont">
+          <div class="info"> <a href="#0">admin</a> <a href="#0">12 Fri 2021</a> </div>
+          <h5 class="playfont"><a href="node/33.html">Five Things You Should Know About Modern Furniture.</a> </h5>
+          <a href="node/33.html" class="more"> <span class="custom-font">Read More</span> </a>
+        </div>
+      </div>
+    </div> -->
+        </div>
+    </div>
+</section>
+
+{% endblock content %}

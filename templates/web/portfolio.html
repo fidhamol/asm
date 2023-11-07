@@ -1,0 +1,178 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<header class="pages-header bg-img valign parallaxie"
+  data-background="https://archo.drupalet.com/demo/themes/drupalet_archo/img/05.jpg" data-overlay-dark="5">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="cont text-center">
+          <h1>Project</h1>
+          <div class="path">
+            <a href="#0">Home</a><span>/</span><a href="#0" class="active">Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<div data-drupal-messages-fallback class="hidden"></div>
+<section id="block-drupalet-archo-content"
+  class="section block drp-block block-system block-system-main-block no-title">
+  <div class="container rm-container-class">
+    <div class="row row-content">
+      <article data-history-node-id="44" role="article" about="portfolio" typeof="schema:WebPage" class="article">
+        <span property="schema:name" content="Portfolio" class="hidden"></span>
+        <div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section
+  class="views-element-container portfolio section-padding section block drp-block block-views block-views-blockportfolio-block-list-portfolio-style4 no-title"
+  id="block-views-block-portfolio-block-list-portfolio-style4">
+  <div class="container rm-container-class">
+    <div class="row row-content">
+      <div class="filtering text-center col-12 wow fadeInUp" data-wow-delay=".3s">
+        <div class="filter bg-img bg-repeat" data-background="img/line-pattern1.png">
+          <span data-filter="*" class="active">All</span>
+          {% for ins in categories %}
+          <span data-filter=".item-{{ins.id}}">{{ins.name}}</span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <div class="gallery twsty inf-lit full-width">
+        {% for project in projects %}
+        <div class="items itemitem1 item-{{project.category.id}} three-column mt-50">
+          <div class="item-img bg-img"
+            data-background="{{project.image.url}}">
+            <a href="#">
+              <div class="item-img-overlay"></div>
+            </a>
+          </div>
+          <div class="info mt-10">
+            <h5> {{project.title}}</h5>
+            <span>{{project.category}}</span>
+          </div>
+        </div>
+        {% endfor %}
+
+        <!-- <div class="items itemitem1 item5 item2 three-column mt-50">
+            <div class="item-img bg-img" data-background="https://archo.drupalet.com/demo/sites/default/files/2021-12/02_1.jpg">
+              <a href="node/19.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Fantastic interior</h5>
+              <span>Web Design, Fashion, WordPress</span>
+            </div>
+          </div>
+          <div class="items itemitem5 item3 item1 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/03_0.jpg' %}">
+              <a href="node/18.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Startup Studio</h5>
+              <span>Fashion, Photoshop, Web Design</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item4 item3 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/04_0.jpg' %}">
+              <a href="node/17.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Luxury Villa2</h5>
+              <span>Web Design, RESIDENTIAL, Photoshop</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item5 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/05.jpg' %}">
+              <a href="node/16.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Creative Spaces</h5>
+              <span>Web Design, Fashion</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item5 item2 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/06.jpg' %}">
+              <a href="node/15.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Creative Agency</h5>
+              <span>Web Design, Fashion, WordPress</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item14 item3 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/07.jpg' %}">
+              <a href="node/14.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Fantastic interior</h5>
+              <span>Web Design, cms, Photoshop</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item5 item4 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/08.jpg' %}">
+              <a href="node/13.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Choose Your Dream</h5>
+              <span>Web Design, Fashion, RESIDENTIAL</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item4 item3 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/09_0.jpg' %}">
+              <a href="node/12.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Luxury Villa</h5>
+              <span>Web Design, RESIDENTIAL, Photoshop</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item2 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/03.jpg' %}">
+              <a href="node/11.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Luxury Villa</h5>
+              <span>Web Design, WordPress</span>
+            </div>
+          </div>
+          <div class="items itemitem1 item14 three-column mt-50">
+            <div class="item-img bg-img" data-background="{% static 'web/imges/img/02.jpg' %}">
+              <a href="node/10.html">
+                <div class="item-img-overlay"></div>
+              </a>
+            </div>
+            <div class="info mt-10">
+              <h5>Creative Spaces</h5>
+              <span>Web Design, cms</span>
+            </div>
+          </div> -->
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}
